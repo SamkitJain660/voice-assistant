@@ -1,4 +1,3 @@
-from __future__ import print_function
 import datetime
 import pickle
 import os.path
@@ -37,9 +36,6 @@ def speak(text):
         print(voice)
     engine.say(text)
     engine.runAndWait()
-
-
-speak('There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain')
 
 
 def get_audio():
@@ -173,7 +169,7 @@ def search_google(text):
         speak('showing the results on your screen now')
         pywhatkit.search(text)
     except:
-        speak('something went wrong. Please try again later many a network issue')
+        speak('something went wrong. Please try again later maybe a network issue')
 
 
 def play_song(text):
@@ -182,11 +178,15 @@ def play_song(text):
 
 
 service = authenticate_google()
-print('google authenticated.')
+print('google authenticated')
 
-text = get_audio()
 
 calStrings = ['what do I have', 'do I have plans on', 'am I busy', 'is there anything']
+
+speak("Hello there im a voice assistant without a name i dont know why anyways you can try taking notes by telling me too duh and ask me if you have any events on a particular day also you can search google and youtube with me by saying google bla bla bla or play radio gaga :) . i might not understand whatever you are saying so please try again...")
+
+text = get_audio()
+print('listening service started...')
 for phrase in calStrings:
     if phrase in text:
         date = get_date(text)

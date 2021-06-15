@@ -1,0 +1,11 @@
+datetime
+pickle
+googleapiclient
+google_auth_oauthlib
+google.auth.transport
+time
+playsound
+speech_recognition
+pyttsx3
+pywhatkit
+webbrowser
